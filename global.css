@@ -1,0 +1,100 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #000;
+    background-color: white;
+}
+
+.spacer.v80 {
+    height: 80px;
+
+}
+
+.spacer.v60 {
+    height: 60px;
+
+}
+
+.spacer.v40 {
+    height: 40px;
+
+}
+
+.spacer.v20 {
+    height: 20px;
+
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.roundCorners {
+    border-radius: 15px;
+}
+
+    .roundCorners.top {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .roundCorners.bottom {
+        border-radius: 0 0 15px 15px;
+    }
+
+a {
+    text-decoration: none;
+}
+
+/* Make the whole navbar orange */
+.navbar {
+padding: 10px 20px;
+background-color: orange; /* Navbar background is orange */
+width: 100%; /* Full width */
+}
+
+/* Styling for the brand name */
+.navbar-brand {
+font-weight: bold;
+color: whitesmoke; /* Make the brand white to contrast */
+}
+
+/* General navbar link styling */
+.navbar-nav {
+display: flex;
+gap: 15px;
+list-style: none;
+padding-left: 0;
+}
+
+.nav-item .nav-link {
+color: black; /* Regular links are black */
+background-color: orange;
+padding: 10px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+display: inline-block;
+font-weight: bold;
+}
+
+/* Hover effect for nav-link */
+.nav-item .nav-link:hover {
+background-color: white;
+color: black;
+}
+
+/* Specific style for Home link */
+.nav-item .nav-link.active {
+background-color: white; /* Home button is always white */
+color: black; /* Text inside remains black */
+pointer-events: none; /* Disable hover on Home */
+}
