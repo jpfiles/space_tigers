@@ -15,7 +15,7 @@ def table(request):
     return render(request, 'table.html')
 
 def contact_us(request):
-    return render(request, 'cantact_us.html')
+    return render(request, 'contact_us.html')
 
 def new(request):
     return HttpResponse('New Page')
