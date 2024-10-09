@@ -1,0 +1,35 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #000;
+    background-color: #0a191f; /* Same as your navbar background */
+    min-height: 100vh; /* Ensures the body takes up full height */
+}
+
+.bg-dark {
+    background-color: #343a40; /* Use a contrasting color */
+    z-index: 1030; /* Ensure it's on top of other content */
+}
+
+.navbar {
+    z-index: 1030; /* Bootstrap default for navbar */
+    margin: 0;
+    padding: 0; /* Remove any extra padding to avoid gaps */
+}
+
+.navbar .nav-link {
+    color: white; /* Ensure links are visible */
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107; /* Change hover color for better visibility */
+}
+
+/* Add a class to contain the main content */
+.container {
+    margin: 0;
+    padding: 20px; /* Adjust as needed to add space within the content */
+    background-color: #0a191f; /* Match the body background */
+}
