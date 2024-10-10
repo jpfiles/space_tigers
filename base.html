@@ -16,13 +16,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a191f; /* Set body background color to match navbar */
+            margin: 0; /* Remove default body margin */
+            min-height: 100vh; /* Ensure the body takes at least full height of the viewport */
+            display: flex;
+            flex-direction: column; /* Use flexbox to handle alignment */
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the items */
+            padding: 20px; /* Add padding for spacing */
+            flex: 1; /* Allow the container to grow and fill the available space */
+            margin: 0px; /* Remove any margin */
+            background-color: #0a191f; /* Set body background color to match navbar */
+        }
+
+        .flex-container > div {
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Optional: Add styles for the card to make it more visually appealing */
+        .card {
+            background-color: #ffffff; /* White background for cards */
+            border-radius: 10px; /* Slightly rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            transition: transform 0.2s; /* Animation for hover effect */
+            padding: 40px;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+    </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand logo" href="http://127.0.0.1:8000/">Space Tigers Shop</a>
+            <a class="navbar-brand logo" href="base.html">Space Tigers Shop</a>
 
             <!-- Navbar Toggler for mobile screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -34,19 +72,19 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="visually-hidden"></span></a>
+                        <a class="nav-link" href="{% url 'index' %}">Home <span class="visually-hidden"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Products</a>
+                        <a class="nav-link" href="{% url 'cust_list' %}">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="newcustomer.html">Sign Up</a>
+                        <a class="nav-link" href="{% url 'newcustomer' %}">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>
