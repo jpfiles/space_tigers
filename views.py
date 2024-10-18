@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, Customer
 from .forms import CustomerForm  # Assuming you have a ModelForm for Customer
 
+
 # Create your views here.
 
 def login(request):
@@ -41,3 +42,9 @@ def delete_customer(request, id):
         customer.delete()
         return redirect('cust_list')
     return render(request, 'delete_confirm.html', {'object': customer})
+
+def add_to_cart(request, id):
+    product = Product.objects.get(id=id)
+    quantity = 1
+    total_price = product.price * quantity
+    return render(request, 'cart.html', {'product': product, 'quantity': quantity, 'total_price': total_price})
